@@ -6,15 +6,24 @@ public class PlayerControler : MonoBehaviour
 {
     public Rigidbody2D rigidbody;
 
-    // Start is called before the first frame update
     void Start()
     {
         
     }
 
-    // Update is called once per frame
     void Update()
     {
-        
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            rigidbody.gravityScale *=  -1;
+        }
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.name.Contains("Spike"))
+        {
+            Destroy(gameObject);
+        }
     }
 }
