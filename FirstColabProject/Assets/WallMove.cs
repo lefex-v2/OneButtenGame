@@ -13,6 +13,10 @@ public class WallMove : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (transform.position.x <= -50)
+        {
+            Destroy(gameObject);
+        }
         transform.position -= new Vector3(10, 0, 0) * Time.deltaTime;
     }
 }
