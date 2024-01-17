@@ -12,10 +12,8 @@ public class WorldControler : MonoBehaviour
     GameObject[] walls;
     void Start()
     {
-        Debug.Log("Hi");
-
         walls = new GameObject[4] { wallPrefab1, wallPrefab2, wallPrefab3, wallPrefab4 };
-        InvokeRepeating("SpawnRandomWall", 10f, 2f );
+        InvokeRepeating("SpawnRandomWall", 5f, 8f );
     }
 
     void Update()
@@ -26,7 +24,6 @@ public class WorldControler : MonoBehaviour
     void SpawnRandomWall()
     {
         int rng = Random.Range(0, 4);
-        Debug.Log(rng);
         Instantiate(walls[rng], new Vector3(30, 0, 0), Quaternion.identity);
     }
 }
