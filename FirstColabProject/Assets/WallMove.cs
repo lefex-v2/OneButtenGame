@@ -13,6 +13,6 @@ public class WallMove : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.position -= new Vector3(3, 0, 0) * Time.deltaTime;
+        transform.position -= new Vector3(10, 0, 0) * Time.deltaTime;
     }
 }

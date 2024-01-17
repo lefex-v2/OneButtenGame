@@ -13,7 +13,7 @@ public class WorldControler : MonoBehaviour
     void Start()
     {
         walls = new GameObject[4] { wallPrefab1, wallPrefab2, wallPrefab3, wallPrefab4 };
-        InvokeRepeating("SpawnRandomWall", 5f, 8f );
+        InvokeRepeating("SpawnRandomWall", 5f, 2.5f );
     }
 
     void Update()
