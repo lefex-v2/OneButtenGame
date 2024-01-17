@@ -1,10 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class PlayerControler : MonoBehaviour
 {
     public Rigidbody2D rigidbody;
+    public TextMeshProUGUI scoreBoard;
+    int score = 0;
 
     void Start()
     {
@@ -25,5 +28,11 @@ public class PlayerControler : MonoBehaviour
         {
             Destroy(gameObject);
         }
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        score++;
+        scoreBoard.text = score.ToString();
     }
 }

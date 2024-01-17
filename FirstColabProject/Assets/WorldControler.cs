@@ -23,7 +23,24 @@ public class WorldControler : MonoBehaviour
 
     void SpawnRandomWall()
     {
-        int rng = Random.Range(0, 4);
-        Instantiate(walls[rng], new Vector3(30, 0, 0), Quaternion.identity);
+        int rng = Random.Range(0, 101);
+
+        if (rng <= 25)
+        {
+            Instantiate(walls[0], new Vector3(30, 0, 0), Quaternion.identity);
+
+        }
+        else if (rng > 25 && rng <= 50)
+        {
+            Instantiate(walls[1], new Vector3(30, 0, 0), Quaternion.identity);
+        }
+        else if (rng > 50 && rng <= 75)
+        {
+            Instantiate(walls[2], new Vector3(30, 0, 0), Quaternion.identity);
+        }
+        else if (rng > 75 && rng <= 100)
+        {
+            Instantiate(walls[3], new Vector3(30, 0, 0), Quaternion.identity);
+        }
     }
 }
