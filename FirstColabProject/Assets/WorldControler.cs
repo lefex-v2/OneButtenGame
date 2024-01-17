@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.iOS;
 
 public class WorldControler : MonoBehaviour
 {
@@ -11,8 +12,10 @@ public class WorldControler : MonoBehaviour
     GameObject[] walls;
     void Start()
     {
+        Debug.Log("Hi");
+
         walls = new GameObject[4] { wallPrefab1, wallPrefab2, wallPrefab3, wallPrefab4 };
-        InvokeRepeating("SpawnWall", 10f, 2f );
+        InvokeRepeating("SpawnRandomWall", 10f, 2f );
     }
 
     void Update()
@@ -20,8 +23,10 @@ public class WorldControler : MonoBehaviour
         
     }
 
-    void SpawnWall()
+    void SpawnRandomWall()
     {
-        Instantiate(walls[Random.Range(0, 3)], new Vector3(30, 0, 0), Quaternion.identity);
+        int rng = Random.Range(0, 4);
+        Debug.Log(rng);
+        Instantiate(walls[rng], new Vector3(30, 0, 0), Quaternion.identity);
     }
 }
