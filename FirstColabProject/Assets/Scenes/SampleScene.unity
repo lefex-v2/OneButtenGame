@@ -2571,9 +2571,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   wallPrefab1: {fileID: 4456422489583340423, guid: 6e232f7eec3d3264eb09589b58930945, type: 3}
-  wallPrefab2: {fileID: 4456422489583340423, guid: 58cb0a1948e04c048a5d42637124f732, type: 3}
-  wallPrefab3: {fileID: 4456422489583340423, guid: 6e232f7eec3d3264eb09589b58930945, type: 3}
-  wallPrefab4: {fileID: 4456422489583340423, guid: 58cb0a1948e04c048a5d42637124f732, type: 3}
+  wallPrefab2: {fileID: 4456422489583340423, guid: 94a77b9ed165f8a469d0c35d11562870, type: 3}
+  wallPrefab3: {fileID: 4456422489583340423, guid: 58cb0a1948e04c048a5d42637124f732, type: 3}
+  wallPrefab4: {fileID: 4456422489583340423, guid: ea679470bdf8b27418a11e8850635210, type: 3}
 --- !u!1 &1740676624
 GameObject:
   m_ObjectHideFlags: 0

@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class PlayerControler : MonoBehaviour
 {
@@ -26,6 +27,7 @@ public class PlayerControler : MonoBehaviour
     {
         if (collision.gameObject.name.Contains("Spike"))
         {
+            SceneManager.LoadScene(0);
             Destroy(gameObject);
         }
     }
